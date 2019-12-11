@@ -92,3 +92,29 @@ const selectText = document.querySelector("textarea");
       });
 
 
+      const stopTheLink = document.querySelectorAll('a');
+        stopTheLink.forEach((anchors) => {
+          anchors.addEventListener("click", (e) => {
+            alert('Stopping the link!');        
+            if (true === false) {
+              e.preventDefault(); 
+            }
+        })
+      })
+
+const body = document.querySelector('body');
+body.addEventListener('click', (event) => {
+  alert('Clicked body!');
+})
+
+const contentSection = document.querySelector('.container');
+contentSection.addEventListener('click', (event) => {
+  alert('Clicked on contents!');
+  event.stopPropagation();
+})
+
+const contentText = document.querySelector('.text-content');
+contentText.addEventListener('click', (event) => {
+  alert('Clicked on paragraph!');
+  event.stopPropagation();
+})
