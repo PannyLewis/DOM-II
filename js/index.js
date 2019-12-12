@@ -118,3 +118,7 @@ contentText.addEventListener('click', (event) => {
   alert('Clicked on paragraph!');
   event.stopPropagation();
 })
+
+gsap.to(".logo-heading", {duration: 1, x: 100});
+gsap.from("img", {duration: 3, x: 300, opacity: 0, scale: 0.5});
+gsap.to(".btn", {duration: 3, rotation: 360, scale: 0.5});
